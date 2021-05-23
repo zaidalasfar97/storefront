@@ -9,9 +9,10 @@ import CardContent from "@material-ui/core/CardContent";
 
 
 function Products(props) {
-    console.log(props.active)
+    // console.log(props.active)
     return (
         <Grid item sm={5} >
+
             {props.products.map((product) => {
                 if (props.active === product.category) {
                     return (
@@ -32,6 +33,8 @@ function Products(props) {
                         </Card>
 
                     )
+                } else {
+                    return '';
                 }
             })}
         </Grid>
@@ -39,7 +42,7 @@ function Products(props) {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    // console.log(state);
     return { active: state.categories.active, products: state.products.products };
 };
 
