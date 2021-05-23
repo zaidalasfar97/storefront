@@ -11,21 +11,25 @@ import CardContent from "@material-ui/core/CardContent";
 function Products(props) {
     // console.log(props.active)
     return (
-        <Grid item sm={5} >
-
+        <Grid item sm={5} style={{
+            display: 'grid',
+            gridColumnGap: '60px',
+            gridTemplateColumns: 'auto auto auto',
+            margin: '20px',
+        }}>
             {props.products.map((product) => {
                 if (props.active === product.category) {
                     return (
                         <Card
-                            style={{ width: "300px", height: '300px', margin: '20px' }}
+                            style={{ width: "300px", height: '300px', margin: '20px', float: 'left' }}
                             className={`cards ${product.name}`}
                             key={product.name}
                         >
-                            <img alt={product.name} src={product.image} width="100" height="100"></img>
+                            <img alt={product.name} src={product.image} width="100" height="100" style={{ marginLeft: '90px' }} ></img>
                             <CardMedia className={"img"} image={product.img} />
-                            <CardContent>{product.name}</CardContent>
-                            <CardContent>Price : {product.price}$</CardContent>
-                            <CardContent>in Stock : {product.stock}</CardContent>
+                            <CardContent style={{ fontSize: '15px', margin: 'auto', padding: '10px' }}>{product.name}</CardContent>
+                            <CardContent style={{ fontSize: '15px', margin: 'auto', padding: '10px' }}>Price : {product.price}$</CardContent>
+                            <CardContent style={{ fontSize: '15px', margin: 'auto', padding: '10px' }}>in Stock : {product.stock}</CardContent>
                             <section className="btnn">
                                 <Button variant="light" style={{ color: 'white', background: 'black', margin: '5px 5px 5px' }}>ADD TO CART</Button>
                                 <Button variant="light" style={{ color: 'white', background: 'black', margin: '5px 5px 5px' }}>VIEW DETAILS</Button>
