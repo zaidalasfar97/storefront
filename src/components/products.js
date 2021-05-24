@@ -25,7 +25,7 @@ function Products(props) {
                             className={`cards ${product.name}`}
                             key={product.name}
                         >
-                            <img alt={product.name} src={product.image} width="100" height="100" style={{ marginLeft: '90px' }} ></img>
+                            <img alt={product.name} src={product.image} width="110" height="110" style={{ marginLeft: '90px' }} ></img>
                             <CardMedia className={"img"} image={product.img} />
                             <CardContent style={{ fontSize: '15px', margin: 'auto', padding: '10px' }}>{product.name}</CardContent>
                             <CardContent style={{ fontSize: '15px', margin: 'auto', padding: '10px' }}>Price : {product.price}$</CardContent>
