@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -19,12 +19,19 @@ function Header(props) {
                 <Typography variant="h5" className={style.title}>
                     OUR STORE
     </Typography>
+                <Typography variant="h5" className={style.title} >
+                    CART({props.cart.length})
+    </Typography>
             </Toolbar>
         </AppBar>
     )
 }
 
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart.cart,
+    };
+};
 
 
-
-export default Header;
+export default connect(mapStateToProps)(Header);

@@ -1,8 +1,8 @@
 # Getting Started with Create React App
 
 # [netlify](https://lucid-mcclintock-1a0e6e.netlify.app/)
-# [PR](https://github.com/zaidalasfar97/storefront/pull/3)
-![UML](./store.png)
+# [PR](https://github.com/zaidalasfar97/storefront/pull/4)
+![UML](./store1.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
