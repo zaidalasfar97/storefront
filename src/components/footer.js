@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         top: 'auto',
         bottom: 0,
-        height: '60px'
+        height: '100px'
     },
 }));
 
